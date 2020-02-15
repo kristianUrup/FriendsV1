@@ -83,9 +83,9 @@ class FriendAdapter extends ArrayAdapter<BEFriend> {
 
         BEFriend f = friends.get(position);
 
-        TextView name = (TextView) v.findViewById(R.id.name);
-        TextView phone = (TextView) v.findViewById(R.id.phone);
-        ImageView favorite = (ImageView) v.findViewById(R.id.favorite);
+        TextView name = v.findViewById(R.id.name);
+        TextView phone = v.findViewById(R.id.phone);
+        ImageView favorite = v.findViewById(R.id.favorite);
 
         name.setText(f.getName());
         phone.setText(f.getPhone());
