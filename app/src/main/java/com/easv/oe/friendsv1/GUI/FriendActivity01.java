@@ -33,6 +33,9 @@ public class FriendActivity01 extends ListActivity {
                         friends);
 
         setListAdapter(adapter);
+        // the same as...
+        ListView v = getListView();
+        v.setAdapter(adapter);
 
     }
 

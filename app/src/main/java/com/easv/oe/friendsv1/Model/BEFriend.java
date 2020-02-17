@@ -5,6 +5,7 @@ public class BEFriend {
     private String m_name;
     private String m_phone;
     private Boolean m_isFavorite;
+    private String m_homepage;
 
     public BEFriend(String name, String phone) {
         this(name, phone, false);

@@ -32,7 +32,7 @@ public class FriendActivity03 extends ListActivity {
 
         m_friends = new Friends();
 
-        fa = new FriendAdapter(this, R.layout.cell_extended, m_friends.getAll());
+        fa = new FriendAdapter(this, m_friends.getAll());
         this.setListAdapter(fa);
     }
 
@@ -60,9 +60,9 @@ class FriendAdapter extends ArrayAdapter<BEFriend> {
     };
 
 
-    public FriendAdapter(Context context, int textViewResourceId,
+    public FriendAdapter(Context context,
                          ArrayList<BEFriend> friends) {
-        super(context, textViewResourceId, friends);
+        super(context, 0, friends);
         this.friends = friends;
     }
 
@@ -82,6 +82,8 @@ class FriendAdapter extends ArrayAdapter<BEFriend> {
 
 
         BEFriend f = friends.get(position);
+        if (f.getName().equals("Frederik"))
+            v.setBackgroundColor(Color.parseColor("000000"));
 
         TextView name = v.findViewById(R.id.name);
         TextView phone = v.findViewById(R.id.phone);
